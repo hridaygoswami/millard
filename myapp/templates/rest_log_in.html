@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice Hub Login</title>
+  <style>
+    body {
+      font-family: Courier New, monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('../static/image/oleg-devyatka-hhRMczWxGaE-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      background-color: #6d350bc3;
+      padding: 7%;
+      border-radius: 5px;
+      box-shadow: 0 4px 7px rgba(14, 11, 11, 0.803);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    h2 {
+      color: #ffefef;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color:#ffffff;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    input[type="submit"] {
+      background-color:  #0a0404;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    input[type="submit"]:hover {
+      background-color: #062f5b;
+    }
+    .line{
+        margin-bottom: 10%;
+        color:rgb(66, 18, 18);
+        font-size: 30px;
+        margin-top: 0%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to Notice Hub</h2>
+    <P class="line">_________________________</P>
+    <form id="loginForm" onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <input type="submit" value="Log In">
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const passwordError = document.getElementById('passwordError');
+      
+            if (password !== confirmPassword) {
+              passwordError.textContent = "Passwords do not match.";
+              return false;
+            } else {
+              passwordError.textContent = "";
+              return true;
+            }
+          }
+    }
+  </script>
+</body>
+</html>
