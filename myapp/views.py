@@ -57,7 +57,7 @@ def redirect_reservations(request):
     # print(name, phone, date, party_size, info)
     reservation_model = reservation(name=name, contact_number=phone, date=django_date, party_size=party_size, additional_information=info)
     reservation_model.save()
-    return HttpResponse("Redirecting")
+    # return HttpResponse("Redirecting")
     return render(request, "reservations_redirect.html", {
         "res":"Thank you for the reservation"
     })
